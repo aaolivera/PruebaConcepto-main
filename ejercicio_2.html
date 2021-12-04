@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Code Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	
+    <style>
+        body {
+            background-color: #0e6a73;
+            text-align: center;
+            font-size: 16pt;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .container {
+            display: table;
+            height: 95vh;
+            width: 95vw;
+			margin:0px
+        }
+
+        .question, .code-area {
+            padding: 25px;
+            display: table-cell;
+            width: 50%;
+        }
+
+        .question {
+            text-align: left;
+            position: absolute;
+			color: #fff;
+            top: 0vh;
+        }
+
+        .code-area {
+            border-left: 2px solid #fff;
+			padding-top:20px;
+        }
+
+        .input, #results {
+            height: 60%;
+        }
+
+        .input, #results2 {
+            height: 60%;
+        }
+
+        .input {
+            border: 1px solid gray;
+            width: 90%;
+            font-family: monospace;
+            font-size: 12pt;
+            padding: 10px;
+        }
+
+        button {
+            width: auto;
+            height: 50px;
+            cursor: pointer;
+            background-color: #169eb7;
+            color: white;
+            font-weight: bolder;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+        }
+		
+		.button2 {
+		    width: 300px;
+            height: 50px;
+            background-color: #169eb7;
+            color: white;
+            font-weight: bolder;
+		  text-align: center;
+		  text-decoration: none;
+        }
+		.button:hover {
+		  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+		}
+
+        #results {
+		  color: #fff;
+        }
+
+        #results2 {
+		  color: #fff;
+        }
+
+        .dropbtn {
+        background-color: #169eb7;
+        color: white;
+        font-weight: bolder;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        }
+
+        .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #dfdede}
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+        background-color: rgb(28, 175, 201);
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0e6a73;">
+  <img src="https://www.ucaecemdp.edu.ar/wp-content/uploads/2019/10/logo_caece.png" width="150" style="padding-left:15px"/> <span style="color:#fff;font-size:28px; padding-left:10px"><strong>Laboratorio Remoto</strong></span>
+  <span style="color:#fff;font-size:28px; text-align:right;padding-left:10px">- Materia: Introducción a la Informática.  Unidad: 2.</span>		
+</nav>
+    <div class="container">
+        <div class="question" style="padding-top:80px">	
+            <div class="dropdown">
+                <button class="dropbtn">Listado de Ejercicios</button>
+                <div class="dropdown-content">
+                <a href="./index.html">Ejercicio 1</a>
+                <a href="./ejercicio_2.html">Ejercicio 2</a>
+                <a href="./ejercicio_3.html">Ejercicio 3</a>
+                <a href="./ejercicio_4.html">Ejercicio 4</a>
+                </div>
+            </div>
+            <div style="margin-top:10px;padding-top:10px">
+            
+                <h2 style="color:#fff"><strong>Ejercicio 2</strong></h2>Se requiere generar la siguiente función:
+                <br/>-Sumar: que me permita dado dos números obtener el  
+                <br/>resultado dela suma de los mismos.
+            </div>
+            <div style="margin-top:10px;padding-top:10px">
+                <button onclick="window.location.href='./index.html'">Anterior</button>
+                <button onclick="window.location.href='./ejercicio_3.html'">Siguiente</button>
+            </div>
+        </div>
+        <div class="code-area">
+            <textarea rows="20" class="input" id="code" autofocus>def sumar(a,b):
+            </textarea>
+            <br/><br/>
+            <textarea rows="2" class="input" id="datos" autofocus>ingrese aqui sus datos. EJ: 1,2</textarea>
+            <br/><br/>
+			<button onclick="testThing(this)">PROBAR</button>
+            <br/><br/>
+            <span id="results2"></span>
+            <br/><br/>
+            <button onclick="runTests(this)">CORREGIR</button>
+			<button onclick="">DESCARGAR</button>
+            <br/><br/>
+            <span id="results"></span>
+            <br/><br/>
+        </div>
+    </div>
+    <!-- Función para correr las pruebas unitarias correspondientes al ejercicio:
+    IMPORTANTE, FALTA LA LOGICA PARA QUE DISCRIMINE EL EJERCICIO QUE SE ESTA RESOLVIENDO Y CORRA LAS UNIT TEST CORRESPONDIENTES PARA ESE EJERCICIO.-->
+    <script>
+        function runTests(btn) {
+            // Ocultar el botón de Corregir.
+            btn.style.display = "none";
+            //Imprime por pantalla Corriendo pruebas...
+            document.getElementById("results").innerHTML = "Corriendo pruebas...";
+
+            // Obtiene el codigo respondido en el text area y lo guarda en una variable.
+            const code = document.getElementById("code").value;
+            //Genera un HTTP REQUEST
+            let xhr = new XMLHttpRequest();
+
+            //Para los cambios que se vayan realizando, ejemplo para detectar cuando termino de correr las pruebas unitarias.
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    //En pantalla se retorna el resultado de las pruebas unitarias:
+                    document.getElementById("results").innerHTML = xhr.responseText;
+                    //Se vuelve a poner disponible el botón.
+                    btn.style.display = "initial";
+                }
+            }
+
+            //Enviar el codigo generado.
+            xhr.open("POST", "http://localhost:5000/test/");
+            xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify({ "code": code, "id":"2" }));
+        }
+    </script>
+    <script>
+        function testThing(btn){
+                btn.style.display = "none";
+                document.getElementById("results2").innerHTML = "Corriendo pruebas...";
+                const code = document.getElementById("code").value;
+                const datos = document.getElementById("datos").value;
+                let xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = () => {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("results2").innerHTML = xhr.responseText;
+                    btn.style.display = "initial";
+                }
+        }
+            xhr.open("POST", "http://localhost:5000/test/data");
+            xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify({ "code": code, "id":"2" , "data": datos}));
+        }
+    </script>
+	<!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
